@@ -17,7 +17,7 @@
 
 >This data includes images, files, and scripts, Which automatically store on the device for the first time when the user opens an application or web page. This process helps users to load the system or website faster.
 
->Generally, website owners want to pay for user's visitations to the server. For every page to be download from servers, it's not cost-efficient for the website owner. If the cache data is collected by the system, then no need to download additional data from a website every time, so that the user will save the amount of money. The website owner is cost-efficient and users will encourage to revisit a website.
+>Generally, website owners want to pay for user's visitations to the server. For every page to be download from servers, it's not cost-efficient for the website owner. If the cache data is collected by the system, then no need to download additional data from a website every time, so that the owner will save the amount of money. The users will encourage to revisit the website.
 
 ### Concept
 
@@ -28,7 +28,7 @@
 
 1. Memory caches store in a local computer on random access memory(RAM). The next time if similar result happens, resources pull data from RAM and helps things to load from RAM without downloading data.
 
-2. The browser cache is stores data in the browser, which can access data to load the website with local computers RAM.
+2. The browser cache stores data in the browser, which can access data to load the website with local computers RAM.
 
 * The cache is saved with priorities like Header to sort the data and easily accessible by memory to display without downloading additional data.
 
@@ -40,16 +40,16 @@
 
 * Code logic errors can affect writing cache data in memory and breaks in the formatting sequence of lines.
 
-* Usually, we set an expiration time for the cache. After the database will delete the cache and extends the performance time. It will cause the client to have face user experience or system crashes.
+* Usually, we set an expiration time for writing cache. After the expiration time database will delete the cache data and extends the performance time. It will cause the client to face user experience or system crashes.
 
 
 ### Solutions
 
-* When there is no key store empty data to write in the cache then all request hits to the database. With the slight modification of code, it is possible to create keys for requests. Often request results will direct returns null. 
+* When there is no key to store empty data to write data in the cache, all requests hit the database. With the slight modification of code, it is possible to create keys for requests. Often requests results return null.
 
 * Another solution with Bloomfilter is possible. Which creates barriers before the cache to store all keys exits in the current database. If the request key is not present then it will avoid chacking cache data and return null directly. If a key is present in the database, the matched key will go through the database. 
 
-* We can use a lock mechanism for the cache. when the first request is initiated, the data in the cache will be locked. at this time other queries will not able to access data until a request to complete. After lock release, The waiting queries will be directly retrieved data from the cache.
+* We can use a lock mechanism for the cache. When the first request is initiated, the data in the cache will be locked. at this time other queries will not able to access data until a request to complete. After lock release, The waiting queries will be directly retrieved data from the cache.
 
 ### Resources
 
