@@ -13,24 +13,29 @@
 * Resources
 
 ### Introduction
->The cache is a process that copies data in a temporary system location and can be access to load a website or system faster. It ensures that websites or Systems do not need to download data every time. The process saves temporary data from Softwares, Servers, websites.
+The cache is a process that copies data in a temporary system location and can be access to load a website or system faster. It ensures that websites or Systems do not need to download data every time. The process saves temporary data from Softwares, Servers, websites.
 
->This data includes images, files, and scripts, Which automatically store on the device for the first time when the user opens an application or web page. This process helps users to load the system or website faster.
+This data includes images, files, and scripts, Which automatically store on the device for the first time when the user opens an application or web page. This process helps users to load the system or website faster.
 
->Generally, website owners want to pay for user's visitations to the server. For every page to be download from servers, it's not cost-efficient for the website owner. If the cache data is collected by the system, then no need to download additional data from a website every time, so that the owner will save the amount of money. The users will encourage to revisit the website.
+
+Generally, website owners want to pay for every visit of the user to the server. For every page to be download from servers, it will cost the website owner. If the cache data is collected by the system, Then no need to download additional data from a website everytime, so that the owner will save the amount of money. The users will encourage to revisit the website.
+
+
+Nowadays, the cache concept is modified and simplest enough. Without storing additional data separately, systems save a copy of the page in a browser. In this way, web pages have read access faster.
+
 
 ### Concept
 
 * The cache can save in two ways 
 >
->1. browser cache.
->2. memory cache.
+>1. Browser cache.
+>2. Memory cache.
 
-1. Memory caches store in a local computer on random access memory(RAM). The next time if similar result happens, resources pull data from RAM and helps things to load from RAM without downloading data.
+1. Memory caches store in a local computer on random access memory(RAM). The next time if similar result happens, resources pull data from RAM and helps things to load from RAM without loading all data.
 
-2. The browser cache stores data in the browser, which can access data to load the website with local computers RAM.
+2. The browser cache stores data in the browser, Which can access data to load the website with local computers RAM.
 
-* The cache is saved with priorities like Header to sort the data and easily accessible by memory to display without downloading additional data.
+* The cache is saved with priorities like "Header" to sort the data and is easily accessible by memory to display without downloading additional data.
 
 * Because of cache can not use a lot of memory to store files and low latency means to run application accessible faster.
 
@@ -40,7 +45,7 @@
 
 * Code logic errors can affect writing cache data in memory and breaks in the formatting sequence of lines.
 
-* Usually, we set an expiration time for writing cache. After the expiration time database will delete the cache data and extends the performance time. It will cause the client to face user experience or system crashes.
+* Usually, We set a time limit for writing cache. After the expiration time database will delete the cache data and extends the performance time. It will cause the client to face user experience or system crashes.
 
 
 ### Solutions
