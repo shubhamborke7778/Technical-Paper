@@ -11,11 +11,11 @@
 
 The cache is a process, that copies data in a temporary system location and can be access to load a website or system faster. It ensures that websites or Systems do not need to download data regularly. The process saves temporary data from software, servers, websites, etc.
 
-Web caching is also known as the strategy of improving performance for Web-based systems. The Web caching mechanism is implemented in three ways: client level, proxy level,  original server level. The cache is the core of web cashing, which takes places cache mechanisms, storing strategies,  cache replacement, etc.
+Web caching is also known as the strategy of improving performance for web-based systems. The web caching mechanism is implemented in three ways: client level, proxy level, original server level. The cache is the core of web cashing, which takes places cache mechanisms, storing strategies, cache replacement, etc.
 
 
 
-Cache storing mechanisms have limited space to use for the cache storing process. Here intelligence mechanism takes place to manage Web content efficiency. What Web-cache should store and what Web-object should be replaced to make the best use of available cache space better, help to improve the performance of the system.
+Cache storing mechanisms have limited space to use for the cache storing process. Here intelligence mechanism takes place to manage web content efficiency. What web-cache should store and what web-object should be replaced to make the best use of available cache space better, help to improve the performance of the system.
 
 Nowadays, the cache concept is modified and simplest enough. Without storing additional data separately, systems save a copy of the page in a browser. In this way, web pages have read access faster.
 
@@ -26,9 +26,9 @@ Nowadays, the cache concept is modified and simplest enough. Without storing add
 ### Web Cache
 <hr>
 
-Web-cache is one of the best successful solutions for improving the performance of Web-based systems. In the concept of caching, the repeated objects are kept in a position closer to the client machine or proxy servers. Those, Web caching reduces extra timeout taken by Websites.
+Web-cache is one of the best successful solutions for improving the performance of web-based systems. In the concept of caching, the repeated objects are kept in a position closer to the client machine or proxy servers. Those, web caching reduces extra timeout taken by websites.
 
-There are three types of fundamentals in Web-caching to store cache.
+There are three types of fundamentals in web-caching to store cache.
 1. Browser cache
 2. Proxy server cache
 3. Original server cache
@@ -39,7 +39,7 @@ Browser cache is located near the client system. The client can observe it in in
 
 #### 2. Proxy Server Cache
 
-Proxy server cache is found in proxy servers where clients accessing data from. It helps to serve data faster from Web and client also. When the rapid request arrives at the proxy server will check further for the cache. If a cache key is found then similar contents will serve to the client or similar checks for Web to receive it.
+Proxy server cache is found in proxy servers where clients accessing data from. It helps to serve data faster from web and client also. When the rapid request arrives at the proxy server will check further for the cache. If a cache key is found then similar contents will serve to the client or similar checks for web to receive it.
 
 #### 3. Original Server Cache
 
