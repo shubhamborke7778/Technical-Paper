@@ -61,7 +61,7 @@ When cache space is occupied and removed the least frequent data for store a new
 
 
 
-### Solutions
+### Limitations and Solutions
 <hr>
 
 * When there is no key to store empty data to write data in the cache, all requests hit the database. With the slight modification of code, it is possible to create keys for requests. Often requests results return null.
