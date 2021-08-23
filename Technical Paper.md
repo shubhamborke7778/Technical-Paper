@@ -38,7 +38,7 @@ The browser cache is located near the client system. The client can observe it i
 
 #### 2. Proxy Server Cache
 
-Proxy server cache is found in proxy servers where clients accessing data from. It helps to serve data faster from the web and client also. When the rapid request arrives at the proxy server will check further for the cache. If a cache key is found, then similar contents will served to the client or similar checks for the web to receive it.
+Proxy server cache is found in proxy servers where clients accessing data from. It helps to serve data faster from the web and client also. When the rapid request arrives at the proxy server will check further for the cache. If a cache key is found, then similar contents will be served to the client or similar checks for the web to receive it.
 
 #### 3. Original Server Cache
 
@@ -47,7 +47,7 @@ Original server cache is saved on server-site to reduce redundancy of repeat req
 
 >Generally, scaling and processing issues happen with Browser cache, Proxy server cache, and original server cache departments.
 
-### Algoritham
+### Algorithm
 <hr>
 
 Cache has an algorithm to store our store out. As the cache has a limited size to store. If cache memory is full of storing objects, there will be an amount of data loss happen if there is no space reserved for the cache. Hence the cache algorithm takes place. The cache should evict the data to allow space for the new object.
@@ -73,18 +73,18 @@ Scaling and Processing issues usually occur when load happens on the server. Sca
 
 * Sometimes there are existing keys located with different cache data. To realize which data to take and which to drop matters. Hence some techniques are used to store cache data. Explains inside solutions.
 
-* Generally, processing of the request is caused by reaching out to the network, no proper network, etc. Hence Bloom-filter, Lock-mechanism used here to resolve runtime problems.
+* Generally, processing of the request is caused by reaching out to the network, no proper network, etc. Hence Bloom-filter, Lock-mechanism is used here to resolve runtime problems.
 
 ### Solutions
 <hr>
 
 * When there is no key to store empty data to write data in the cache, all requests hit the database. With the slight modification of code, it is possible to create keys for requests. Often requests results returned null.
 
-* Another solution with the "Bloom filter" is possible. Which creates barriers before the cache to store all keys exists in the current database. If the request key is not present, then it will avoid checking cache data and return null directly. If a key is present in the database, the matched key will go through the database. 
+* Another solution with the "Bloom filter" is possible. Which creates barriers before the cache to store all keys that exist in the current database. If the request key is not present, then it will avoid checking cache data and return null directly. If a key is present in the database, the matched key will go through the database.
 
 * We can use a lock mechanism for the cache. When the first request is initiated, the data in the cache will be locked. At this time other queries will not be able to access data until a request is complete. After locking release, the waiting queries will be directly retrieved data from the cache. 
 
-* To avoid scaling issues from the original server to the proxy server, the recently reserved request should be stored in cache and a copy of the process also should be kept by the original server. The same thing happens with a proxy server to a client-server. Hence, the original server and proxy server can check for the existing key. If exist, will redirect that data. else, create a copy of process data.
+* To avoid scaling issues from the original server to the proxy server, the recently reserved request should be stored in the cache and a copy of the process also should be kept by the original server. The same thing happens with a proxy server to a client-server. Hence, the original server and proxy server can check for the existing key. If exist, will redirect that data. else, create a copy of process data.
 
 ### Resources
 <hr>
