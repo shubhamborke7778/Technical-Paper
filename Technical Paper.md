@@ -46,6 +46,8 @@ Proxy server cache is found in proxy servers where clients accessing data from. 
 
 Original server cache is saved on server-site to reduce redundancy of repeat requests from proxy servers. Server load will be reduced if cache stored exists in server-site.
 
+>Generally, scaling and Processing issues happen with Browser cache, Proxy server cache, original server cache departments.
+
 ### Algoritham
 <hr>
 
@@ -58,10 +60,24 @@ When cache space is occupied and removed the least frequent data for store a new
 
 ![Formula for cache calculation](Capture.png)
 
+### Scaling
+<hr>
 
+Scaling problems generally occur in databases. When servers requested lots of requests in a second then the system freezes. For processing and smoothing requests from clients or servers, systems need to resolve for processing techniques.
 
+If the server loaded with dozens of requests pending then the server's processing time will convert into waiting time. Hence the client can face issues with a timeout from the server.
 
-### Limitations and Solutions
+Scaling and Processing issues usually occur when load happens on the server. Scaling is related to keys per request and Processing is related to the processing time of that process.
+
+### Limitations 
+
+* Repeated requests from the client and server will affect the database and trouble storing data. There will be some memory issues for storing keys to cache or cache data.
+
+* Sometimes there are existing keys located with different cache data. To realize which data to take and which to drop matters. Hence some techniques are used to store cache data. Explains inside solutions.
+
+* Generally, processing of the request is caused by reaching are of the network, no proper network, etc. Hence Bloom-filter, Lock-mechanism uses here to resolve runtime problems.
+
+### Solutions
 <hr>
 
 * When there is no key to store empty data to write data in the cache, all requests hit the database. With the slight modification of code, it is possible to create keys for requests. Often requests results return null.
@@ -69,6 +85,8 @@ When cache space is occupied and removed the least frequent data for store a new
 * Another solution with "Bloom filter" is possible. Which creates barriers before the cache to store all keys exits in the current database. If the request key is not present then it will avoid chacking cache data and return null directly. If a key is present in the database, the matched key will go through the database. 
 
 * We can use a lock mechanism for the cache. When the first request is initiated, the data in the cache will be locked. At this time other queries will not able to access data until a request to complete. After lock release, the waiting queries will be directly retrieved data from the cache.
+
+* For avoiding scaling issues from the original server to the proxy server, the recently reserved request should store in cache and a copy of the process also should be kept by the original server. The same thing happens with a proxy server to a client-server. Hence original server and proxy server can check for the existing key. If exist, will redirect that data. If do not, then make a copy of the process data.
 
 ### Resources
 <hr>
