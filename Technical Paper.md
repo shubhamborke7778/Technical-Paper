@@ -50,7 +50,7 @@ Original server cache is saved on server-site to reduce redundancy of repeat req
 ### Algorithm
 <hr>
 
-Cache has an algorithm to store our store out. As the cache has a limited size to store. If cache memory is full of storing objects, there will be an amount of data loss happen if there is no space reserved for the cache. Hence the cache algorithm takes place. The cache should evict the data to allow space for the new object.
+Cache has an algorithm to store in or store out. As the cache has a limited size to store. If cache memory is full of storing objects, there will be an amount of data loss if there is no space reserved for the cache. Hence the cache algorithm takes place. The cache should evict the data to allow space for the new object.
 
 In the industry, there are a lot of algorithms for storing cache. The most commonly used algorithm is Least-Recently-Used (LRL). It removes least used objects until require space for writing cache data. The least-recently-used method is easy to implement and simpler accessible for uniform-size objects or data. Hence the cache is populated with a small object's size for availability to store the extra amount of data.
 
@@ -65,7 +65,7 @@ Scaling problems generally occur in databases. When servers request lots of requ
 
 If the server is loaded with dozens of requests pending then the server's processing time will convert to waiting time. Hence the client can face issues with a timeout from the server.
 
-Scaling and Processing issues usually occur when load happens on the server. Scaling is related to keys per request and processing is related to the processing time of that process.
+Scaling and Processing issues usually occur when there's load on the server. Scaling is related to keys per request and processing is related to the processing time of that process.
 
 ### Limitations 
 
